@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册新账户 - 我的博客</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm() {
+            const password = document.getElementById("password").value;
+            const confirm_password = document.getElementById("confirm_password").value;
+            const username = document.getElementById("username").value;
+
+            if (username.length < 3) {
+                alert("用户名至少需要3个字符！");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("密码至少需要6个字符！");
+                return false;
+            }
+
+            if (password !== confirm_password) {
+                alert("密码和确认密码不匹配！");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>注册新账户</h1>
+    </header>
+
+    <main>
+        <form action="register_process.php" method="post" onsubmit="return validateForm()">
+            <div>
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="confirm_password">确认密码:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <div>
+                <button type="submit">注册</button>
+            </div>
+        </form>
+        
+        <p>已有账户？<a href="login.html">登录</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bilibili Mc13年老玩家编程之王. 保留所有权利.</p>
+    </footer>
+</body>
+</html>

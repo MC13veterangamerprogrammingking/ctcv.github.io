@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建新文章 - 我的博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>创建新文章</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="login.html">登录</a></li>
+                <!-- 其他导航链接 -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="create_post_process.php" method="post">
+            <div>
+                <label for="title">文章标题:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="content">文章内容:</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+            </div>
+            <div>
+                <button type="submit">发布文章</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bilibili Mc13年老玩家编程之王. 保留所有权利.</p>
+    </footer>
+</body>
+</html>
